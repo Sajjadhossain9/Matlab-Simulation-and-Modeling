@@ -1,0 +1,21 @@
+function peaks_plot(N)
+% PEAKS_PLOT Creates MATLAB peaks surface
+
+if nargin < 1
+    N = 50;
+end
+
+[X, Y, Z] = peaks(N);
+
+figure
+
+mesh(X, Y, Z)
+
+title('MATLAB Peaks')
+xlabel('X')
+ylabel('Y')
+zlabel('Z')
+
+grid on
+
+end
