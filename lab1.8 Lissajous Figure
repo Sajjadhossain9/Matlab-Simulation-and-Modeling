@@ -1,0 +1,24 @@
+function lissajous_plot(N)
+% LISSAJOUS_PLOT Creates a Lissajous figure
+
+if nargin < 1
+    N = 1000;
+end
+
+t = linspace(0, 2*pi, N);
+
+x = sin(3*t);
+y = sin(4*t);
+
+figure
+
+plot(x, y, 'LineWidth', 2)
+
+axis equal
+grid on
+
+title('Lissajous Figure')
+xlabel('x')
+ylabel('y')
+
+end
