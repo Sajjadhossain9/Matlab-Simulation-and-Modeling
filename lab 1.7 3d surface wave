@@ -1,0 +1,28 @@
+function surface_wave(N)
+% SURFACE_WAVE Creates a 3D wave surface
+
+if nargin < 1
+    N = 100;
+end
+
+x = linspace(-5, 5, N);
+y = linspace(-5, 5, N);
+
+[X, Y] = meshgrid(x, y);
+
+R = sqrt(X.^2 + Y.^2);
+
+Z = sin(R);
+
+figure
+
+surf(X, Y, Z)
+
+shading interp
+
+title('3D Surface Wave')
+xlabel('X')
+ylabel('Y')
+zlabel('Z')
+
+end
