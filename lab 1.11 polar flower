@@ -1,0 +1,18 @@
+function polar_flower(N)
+% POLAR_FLOWER Creates a flower-like polar plot
+
+if nargin < 1
+    N = 1000;
+end
+
+theta = linspace(0, 2*pi, N);
+
+r = cos(5*theta);
+
+figure
+
+polarplot(theta, r, 'LineWidth', 2)
+
+title('Polar Flower')
+
+end
