@@ -1,0 +1,22 @@
+function spiral_plot(N)
+% SPIRAL_PLOT Creates a growing spiral
+
+if nargin < 1
+    N = 500;
+end
+
+t = linspace(0, 10*pi, N);
+
+x = t .* cos(t);
+y = t .* sin(t);
+
+figure
+plot(x, y, 'LineWidth', 2)
+grid on
+axis equal
+
+title('Growing Spiral')
+xlabel('x')
+ylabel('y')
+
+end
