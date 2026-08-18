@@ -1,0 +1,22 @@
+function damped_wave(N)
+% DAMPED_WAVE Creates a damped sine wave
+
+if nargin < 1
+    N = 500;
+end
+
+t = linspace(0, 10, N);
+
+y = exp(-0.3*t) .* sin(5*t);
+
+figure
+
+plot(t, y, 'LineWidth', 2)
+
+grid on
+
+title('Damped Sine Wave')
+xlabel('Time')
+ylabel('Amplitude')
+
+end
