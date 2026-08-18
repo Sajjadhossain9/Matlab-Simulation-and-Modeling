@@ -1,0 +1,25 @@
+function helix_plot(N)
+% HELIX_PLOT Creates a 3D helical curve
+
+if nargin < 1
+    N = 1000;
+end
+
+t = linspace(0, 10*pi, N);
+
+x = cos(t);
+y = sin(t);
+z = t;
+
+figure
+
+plot3(x, y, z, 'LineWidth', 2)
+
+grid on
+
+title('3D Helix')
+xlabel('X')
+ylabel('Y')
+zlabel('Z')
+
+end
