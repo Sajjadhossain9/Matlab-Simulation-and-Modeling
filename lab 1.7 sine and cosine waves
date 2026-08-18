@@ -1,0 +1,29 @@
+function sine_cosine_plot(N)
+% SINE_COSINE_PLOT Plots sine and cosine waves
+
+if nargin < 1
+    N = 500;
+end
+
+x = linspace(0, 4*pi, N);
+
+y1 = sin(x);
+y2 = cos(x);
+
+figure
+
+plot(x, y1, 'LineWidth', 2)
+hold on
+
+plot(x, y2, '--', 'LineWidth', 2)
+
+grid on
+legend('sin(x)', 'cos(x)')
+
+title('Sine and Cosine Waves')
+xlabel('x')
+ylabel('Amplitude')
+
+hold off
+
+end
